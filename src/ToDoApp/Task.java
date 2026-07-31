@@ -17,4 +17,44 @@ public abstract class Task {
 
     public abstract void completa();
 
+    public String getCodice() {
+        return codice;
+    }
+
+    public void setCodice(String codice) {
+        this.codice = codice;
+    }
+
+    public String getTitolo() {
+        return titolo;
+    }
+
+    public void setTitolo(String titolo) {
+        this.titolo = titolo;
+    }
+
+    public Priorita getPriorita() {
+        return priorita;
+    }
+
+    public void setPriorita(Priorita priorita) {
+        this.priorita = priorita;
+    }
+
+    public int getDurata() {
+        return durata;
+    }
+
+    public void setDurata(int durata) {
+        this.durata = durata;
+    }
+
+    public boolean isCompletato() {
+        return completato;
+    }
+
+    public void setCompletato(boolean completato) {
+        this.completato = completato;
+    }
 }
+
