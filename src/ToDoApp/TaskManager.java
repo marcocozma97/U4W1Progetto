@@ -36,7 +36,7 @@ public class TaskManager {
         System.out.println("Task aggiunto con successo: " + task.getCodice());
     }
 
-    // METODO CERCA PER CODICE Trova e restituisce un Task partendo dal suo codice.
+    // CERCA PER CODICE Trova e restituisce un Task partendo dal suo codice.
 
     public Task cercaPerCodice(String codice) {
 
@@ -60,5 +60,15 @@ public class TaskManager {
 
         // Se invece è tornato tutto, restituisce il task trovato.
         return taskTrovato;
+    }
+
+    // CERCA PER PRIORITA': Restituisce tutte le task con la stessa priorità (es. ALTA)
+
+    public List<Task> cercaPerPriorita(Priorita priorita) {
+        // Creiamo uno stream con il filter sulle task che coincidono all'argomento che diamo
+        // '.toList()'  per raccogliere tutti i risultati in una lista
+        return listaTask.stream()
+                .filter(t -> t.getPriorita() == priorita)
+                .toList();
     }
 }
